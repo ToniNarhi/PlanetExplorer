@@ -207,13 +207,16 @@ public class PlanetExplorer {
 				tempLocationArray = GetExplorerLocation();
 				int tempX = tempLocationArray[0];
 				int tempY = tempLocationArray[1];
+				System.out.println("Rotation == 3");
 				PlanetSurfaceArray[tempX][tempY] = 0;
+				System.out.println("PlanetSurfaceArray[tempX][tempY] = 0");
 				tempX--;
 				
-				if(tempX > 0)
+				if(tempX >= 0)
 				{
 					boolean IsColliding = CheckCollision(tempX,tempY);
 					if(IsColliding == false)
+						System.out.println("PlanetSurfaceArray[tempX][tempY] = 2");
 						PlanetSurfaceArray[tempX][tempY] = 2;
 					else
 						PlanetSurfaceArray[tempX+1][tempY] = 2;
@@ -222,6 +225,7 @@ public class PlanetExplorer {
 				{
 					boolean IsColliding = CheckCollision(tempX,tempY);
 					if(IsColliding == false)
+						System.out.println("PlanetSurfaceArray[SizeX-1][tempY] = 2");
 						PlanetSurfaceArray[SizeX-1][tempY] = 2;
 					else
 						PlanetSurfaceArray[tempX+1][tempY] = 2;				
