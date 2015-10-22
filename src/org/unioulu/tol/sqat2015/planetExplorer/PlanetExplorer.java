@@ -11,6 +11,10 @@ public class PlanetExplorer {
 		Example use:
 		PlanetExplorer explorer = new PlanetExplorer(100,100,"(5,5)(7,8)")  //A 100x100 grid with two obstacles at coordinates (5,5) and (7,8) 
 	 */
+		int[][] PlanetSurfaceArray = new int[x][y];
+		String[] tokens = obstacles.split("/");
+		for (String t : tokens)
+			  System.out.println(t);
 	}
 	
 	public String executeCommand(String command){
