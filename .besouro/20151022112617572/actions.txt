@@ -31,3 +31,4 @@ RefactoringAction 1445504492635 PlanetExplorer.java ADD int FIELD
 RefactoringAction 1445504494152 PlanetExplorer.java RENAME getPlanetSura=>int FIELD
 RefactoringAction 1445504497171 PlanetExplorer.java RENAME getPlanetSurfa=>int METHOD
 EditAction 1445504540504 TestPlanetExplorer.java 417 1 2 1
+EditAction 1445504540588 PlanetExplorer.java 2242 3 6 0

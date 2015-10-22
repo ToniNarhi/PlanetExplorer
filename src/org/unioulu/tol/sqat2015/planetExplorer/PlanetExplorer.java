@@ -4,6 +4,7 @@ package org.unioulu.tol.sqat2015.planetExplorer;
 // ID:
 // Finish time:
 public class PlanetExplorer {
+	int[][] PlanetSurfaceArray;
 	public PlanetExplorer(int x, int y, String obstacles){
 	/*	x and y represent the size of the grid.
 	 *  Obstacles is a String formatted as follows: "(obs1_x,obs1_y)(obs2_x,obs2_y)...(obsN_x,obsN_y)" with no white spaces. 
@@ -49,6 +50,11 @@ public class PlanetExplorer {
 		
 	}
 	
+	public int[][] getPlanetSurfaceArray()
+	{
+		return PlanetSurfaceArray;
+	}
+	
 	public String executeCommand(String command){
 		
 		/* The command string is composed of "f" (forward), "b" (backward), "l" (left) and "r" (right)
@@ -63,4 +69,6 @@ public class PlanetExplorer {
 		
 		return null;
 	}
+	
+	
 }
