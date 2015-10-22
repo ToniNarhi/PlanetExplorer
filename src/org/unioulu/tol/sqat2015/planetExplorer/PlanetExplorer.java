@@ -15,6 +15,10 @@ public class PlanetExplorer {
 		String[] tokens = obstacles.split("/");
 		for (String t : tokens)
 			  System.out.println(t);
+		String[] tokens2 = obstacles.split(",");
+		for (String t2 : tokens2)
+			  System.out.println(t2);
+		
 	}
 	
 	public String executeCommand(String command){
