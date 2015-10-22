@@ -106,3 +106,6 @@ RefactoringAction 1445508476390 TestPlanetExplorer.java RENAME testIsOutputCorre
 RefactoringAction 1445508477403 TestPlanetExplorer.java RENAME testIsOutputCorrectIfGoingObstacle()=>void testIsOutputCorrectIfGoingOObstacle() METHOD
 RefactoringAction 1445508480415 TestPlanetExplorer.java RENAME testIsOutputCorrectIfGoingOObstacle()=>void testIsOutputCorrectIfGoingOverEdgeObstacle() METHOD
 EditAction 1445508486311 TestPlanetExplorer.java 993 3 7 3
+UnitTestCaseAction 1445508486611 TestPlanetExplorer.java FAIL
+UnitTestSessionAction 1445508486611 TestPlanetExplorer FAIL
+EditAction 1445508550868 TestPlanetExplorer.java 993 3 7 3
