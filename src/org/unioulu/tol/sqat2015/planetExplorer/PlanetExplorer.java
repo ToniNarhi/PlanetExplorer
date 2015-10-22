@@ -5,6 +5,9 @@ package org.unioulu.tol.sqat2015.planetExplorer;
 // Finish time:
 public class PlanetExplorer {
 	int[][] PlanetSurfaceArray;
+	int Rotation = 0;
+	int SizeX;
+	int SizeY;
 	public PlanetExplorer(int x, int y, String obstacles){
 	/*	x and y represent the size of the grid.
 	 *  Obstacles is a String formatted as follows: "(obs1_x,obs1_y)(obs2_x,obs2_y)...(obsN_x,obsN_y)" with no white spaces. 
@@ -12,6 +15,8 @@ public class PlanetExplorer {
 		Example use:
 		PlanetExplorer explorer = new PlanetExplorer(100,100,"(5,5)(7,8)")  //A 100x100 grid with two obstacles at coordinates (5,5) and (7,8) 
 	 */
+		SizeX = x;
+		SizeY = y;
 		PlanetSurfaceArray = new int[x][y];
 		String[] tokens = obstacles.split("/");
 		boolean IsX = true;
@@ -45,9 +50,9 @@ public class PlanetExplorer {
 						PlanetSurfaceArray[tempX][tempY] = 1;
 					}
 				}
-		}
-
-		
+				PlanetSurfaceArray[0][0] = 2;
+				
+		}		
 	}
 	
 	public int[][] getPlanetSurfaceArray()
@@ -55,7 +60,99 @@ public class PlanetExplorer {
 		return PlanetSurfaceArray;
 	}
 	
+	public void RotateAntiClockWise()
+	{
+		if(Rotation == 0)
+		{
+			Rotation = 3;		
+		}
+		else if(Rotation == 1)
+		{
+			Rotation--;		
+		}
+		else if(Rotation == 2)
+		{
+			Rotation--;		
+		}
+		else if(Rotation == 3)
+		{
+			Rotation--;		
+		}	
+	}
+	public void RotateClockWise()
+	{
+		if(Rotation == 3)
+		{
+			Rotation = 0;		
+		}
+		else if(Rotation == 0)
+		{
+			Rotation++;		
+		}
+		else if(Rotation == 1)
+		{
+			Rotation++;		
+		}
+		else if(Rotation == 2)
+		{
+			Rotation++;		
+		}	
+	}
+	
+	public int[] GetExplorerLocation()
+	{
+		for(int x = 0; x < SizeX; x++)
+		{
+			for(int y = 0; y < SizeY; y++)
+			{
+				if(PlanetSurfaceArray[x][y] == 2)
+				{
+					return new int[] {x, y};
+				}
+			}
+		}
+		return new int[] {0, 0};	
+	}
+	
+	public void Move(int MovementDirection)
+	{
+		int[] tempLocationArray = new int[2];
+		if(MovementDirection == 1)
+		{
+			if(Rotation == 0)
+			{
+				tempLocationArray = GetExplorerLocation();
+				int tempX = tempLocationArray[0];
+				int tempY = tempLocationArray[1];
+				PlanetSurfaceArray[tempX][tempY] = 0;
+				tempY++;
+				PlanetSurfaceArray[tempX][tempY] = 2;
+			}
+		}
+	}
 	public String executeCommand(String command){
+		
+		char[] commandArray = command.toCharArray();
+		
+		for(int x = 0; x < commandArray.length; x++)
+		{
+			if(commandArray[x] == 'l')
+			{
+				RotateAntiClockWise();
+			}
+			if(commandArray[x] == 'r')
+			{
+				RotateClockWise();
+			}
+			if(commandArray[x] == 'f')
+			{
+				Move(-1);
+			}
+			if(commandArray[x] == 'b')
+			{
+				Move(1);
+			}
+		}
 		
 		/* The command string is composed of "f" (forward), "b" (backward), "l" (left) and "r" (right)
 		 * Example: 
