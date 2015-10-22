@@ -14,4 +14,11 @@ public class TestPlanetExplorer {
 		int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
 		assertEquals(1, tempArray[0][2]);
 	}
+	
+	public void testIsOutputCorrectIfNoObstacle() 
+	{
+		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"");
+		//int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
+		assertEquals("0,2,E", planetExplorer.executeCommand("ffrf"));
+	}
 }

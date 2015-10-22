@@ -56,3 +56,13 @@ RefactoringAction 1445505645421 PlanetExplorer.java ADD int SizeX FIELD
 RefactoringAction 1445505645422 PlanetExplorer.java ADD int SizeY FIELD
 EditAction 1445506263810 PlanetExplorer.java 3870 7 16 0
 EditAction 1445506373941 PlanetExplorer.java 3990 7 16 0
+RefactoringAction 1445506678417 PlanetExplorer.java ADD boolean CheckCollision() METHOD
+RefactoringAction 1445506754629 PlanetExplorer.java RENAME CheckCollision()=>boolean CheckCollision(int) METHOD
+RefactoringAction 1445506758659 PlanetExplorer.java RENAME CheckCollision(int)=>boolean CheckCollision() METHOD
+RefactoringAction 1445506765263 PlanetExplorer.java RENAME CheckCollision()=>boolean CheckCollision(int, int) METHOD
+RefactoringAction 1445507751883 TestPlanetExplorer.java ADD void testIsGridCreatedCorrectly()/2 METHOD
+RefactoringAction 1445507768414 TestPlanetExplorer.java RENAME testIsGridCreatedCorrectly()/2=>void testIsOutputcorrect() METHOD
+RefactoringAction 1445507791945 TestPlanetExplorer.java RENAME testIsOutputcorrect()=>void testIsOutputcorrectIfNoO() METHOD
+RefactoringAction 1445507793955 TestPlanetExplorer.java RENAME testIsOutputcorrectIfNoO()=>void testIsOutputcorrectIfNoObstacle() METHOD
+RefactoringAction 1445507801467 TestPlanetExplorer.java RENAME testIsOutputcorrectIfNoObstacle()=>void testIsOutputCorrectIfNoObstacle() METHOD
+EditAction 1445507931696 TestPlanetExplorer.java 708 2 5 2
