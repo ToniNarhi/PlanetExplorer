@@ -210,7 +210,7 @@ public class PlanetExplorer {
 				PlanetSurfaceArray[tempX][tempY] = 0;
 				tempX--;
 				
-				if(tempX >= 0)
+				if(tempX > 0)
 				{
 					boolean IsColliding = CheckCollision(tempX,tempY);
 					if(IsColliding == false)
