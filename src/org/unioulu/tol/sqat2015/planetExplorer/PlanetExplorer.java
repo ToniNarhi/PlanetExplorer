@@ -18,14 +18,17 @@ public class PlanetExplorer {
 		{
 			  System.out.println(t);
 			  String[] tokens2 = t.split(",");
+			  
 				for (String t2 : tokens2)
 				{
+					boolean isRun = false;
 					if(IsX == true)
 					{
 						  System.out.println("X:"+t2);
 						  IsX = false;
+						  isRun = true;
 					}
-					if(IsX == false)
+					if(IsX == false && isRun == false)
 					{
 						  System.out.println("Y:"+t2);
 						  IsX = true;
