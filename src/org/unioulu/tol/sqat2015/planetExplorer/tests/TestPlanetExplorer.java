@@ -29,4 +29,11 @@ public class TestPlanetExplorer {
 		//int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
 		assertEquals("0,2,E", planetExplorer.executeCommand("ffrfff"));
 	}
+	@Test
+	public void testCollision() 
+	{
+		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"0,1");
+		//int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
+		assertEquals("0,2,E", planetExplorer.executeCommand("f"));
+	}
 }
