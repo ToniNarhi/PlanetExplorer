@@ -15,6 +15,7 @@ public class TestPlanetExplorer {
 		assertEquals(1, tempArray[0][2]);
 	}
 	
+	@Test
 	public void testIsOutputCorrectIfNoObstacle() 
 	{
 		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"");
