@@ -24,3 +24,10 @@ EditAction 1445503981669 PlanetExplorer.java 1884 2 5 0
 UnitTestCaseAction 1445503982402 TestPlanetExplorer.java OK
 UnitTestSessionAction 1445503982403 PlanetExplorer OK
 EditAction 1445504280849 PlanetExplorer.java 2124 2 5 0
+FileOpenedAction 1445504308927 Frame.java 1091 7 12 0
+FileOpenedAction 1445504321289 BowlingGame.java 1980 6 6 0
+RefactoringAction 1445504454046 PlanetExplorer.java ADD int FIELD
+RefactoringAction 1445504492635 PlanetExplorer.java ADD int FIELD
+RefactoringAction 1445504494152 PlanetExplorer.java RENAME getPlanetSura=>int FIELD
+RefactoringAction 1445504497171 PlanetExplorer.java RENAME getPlanetSurfa=>int METHOD
+EditAction 1445504540504 TestPlanetExplorer.java 417 1 2 1
