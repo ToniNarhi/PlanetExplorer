@@ -195,7 +195,7 @@ public class PlanetExplorer {
 				}
 				if(tempY < 0)
 				{
-					boolean IsColliding = CheckCollision(tempX,tempY);
+					boolean IsColliding = CheckCollision(tempX,SizeY-1);
 					if(IsColliding == false)
 						PlanetSurfaceArray[tempX][SizeY-1] = 2;
 					else
