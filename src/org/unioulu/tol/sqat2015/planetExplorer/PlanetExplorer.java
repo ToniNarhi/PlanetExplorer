@@ -13,12 +13,24 @@ public class PlanetExplorer {
 	 */
 		int[][] PlanetSurfaceArray = new int[x][y];
 		String[] tokens = obstacles.split("/");
+		boolean IsX = true;
 		for (String t : tokens)
 		{
 			  System.out.println(t);
 			  String[] tokens2 = t.split(",");
 				for (String t2 : tokens2)
-					  System.out.println(t2);
+				{
+					if(IsX == true)
+					{
+						  System.out.println("X:"+t2);
+						  IsX = false;
+					}
+					if(IsX == false)
+					{
+						  System.out.println("Y:"+t2);
+						  IsX = true;
+					}
+				}
 		}
 
 		
