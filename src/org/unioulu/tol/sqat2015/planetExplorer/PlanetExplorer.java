@@ -285,7 +285,7 @@ public class PlanetExplorer {
 		
 		String Results = tempExplorerLocation[0] + ","+tempExplorerLocation[1] + "," + Srotation;
 		//String Test = "Test";
-		return Test;
+		return Results;
 	}
 	
 	
