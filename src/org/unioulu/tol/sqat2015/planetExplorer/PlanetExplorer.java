@@ -126,7 +126,15 @@ public class PlanetExplorer {
 				int tempY = tempLocationArray[1];
 				PlanetSurfaceArray[tempX][tempY] = 0;
 				tempY++;
+				if(tempY < SizeY)
+				{
 				PlanetSurfaceArray[tempX][tempY] = 2;
+				}
+				if(tempY >= SizeY)
+				{
+				PlanetSurfaceArray[tempX][0] = 2;
+				}
+				
 			}
 		}
 	}
