@@ -98,3 +98,11 @@ EditAction 1445508273703 TestPlanetExplorer.java 719 2 5 2
 UnitTestCaseAction 1445508274050 TestPlanetExplorer.java FAIL
 UnitTestSessionAction 1445508274050 TestPlanetExplorer FAIL
 EditAction 1445508362003 PlanetExplorer.java 6936 8 25 0
+UnitTestCaseAction 1445508362330 TestPlanetExplorer.java FAIL
+UnitTestSessionAction 1445508362331 TestPlanetExplorer FAIL
+RefactoringAction 1445508471864 TestPlanetExplorer.java ADD void testIsOutputCorrectIfNoObstacle()/2 METHOD
+RefactoringAction 1445508474877 TestPlanetExplorer.java RENAME testIsOutputCorrectIfNoObstacle()/2=>void testIsOutputCorrectIfObstacle() METHOD
+RefactoringAction 1445508476390 TestPlanetExplorer.java RENAME testIsOutputCorrectIfObstacle()=>void testIsOutputCorrectIfGoingObstacle() METHOD
+RefactoringAction 1445508477403 TestPlanetExplorer.java RENAME testIsOutputCorrectIfGoingObstacle()=>void testIsOutputCorrectIfGoingOObstacle() METHOD
+RefactoringAction 1445508480415 TestPlanetExplorer.java RENAME testIsOutputCorrectIfGoingOObstacle()=>void testIsOutputCorrectIfGoingOverEdgeObstacle() METHOD
+EditAction 1445508486311 TestPlanetExplorer.java 993 3 7 3
