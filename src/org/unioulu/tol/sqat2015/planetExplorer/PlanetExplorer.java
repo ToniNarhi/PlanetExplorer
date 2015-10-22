@@ -114,12 +114,22 @@ public class PlanetExplorer {
 		return new int[] {0, 0};	
 	}
 	
+	public boolean CheckCollision(int CoordX, int CoordY)
+	{
+		
+		if(PlanetSurfaceArray[CoordX][CoordY] == 1)
+		{
+			return true;
+		}
+		return false;
+	}
+	
 	public void Move(int MovementDirection)
 	{
 		int[] tempLocationArray = new int[2];
 		if(MovementDirection == 1)
 		{
-			if(Rotation == 0)
+			if(Rotation == 0) //North
 			{
 				tempLocationArray = GetExplorerLocation();
 				int tempX = tempLocationArray[0];
@@ -128,13 +138,94 @@ public class PlanetExplorer {
 				tempY++;
 				if(tempY < SizeY)
 				{
-				PlanetSurfaceArray[tempX][tempY] = 2;
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[tempX][tempY] = 2;
+					else
+						PlanetSurfaceArray[tempX][tempY-1] = 2;
 				}
 				if(tempY >= SizeY)
 				{
-				PlanetSurfaceArray[tempX][0] = 2;
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[tempX][0] = 2;
+					else
+						PlanetSurfaceArray[tempX][tempY-1] = 2;				
+				}			
+			}
+			if(Rotation == 1) //East
+			{
+				tempLocationArray = GetExplorerLocation();
+				int tempX = tempLocationArray[0];
+				int tempY = tempLocationArray[1];
+				PlanetSurfaceArray[tempX][tempY] = 0;
+				tempX++;
+				if(tempX < SizeX)
+				{
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[tempX][tempY] = 2;
+					else
+						PlanetSurfaceArray[tempX-1][tempY] = 2;
 				}
+				if(tempX >= SizeX)
+				{
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[0][tempY] = 2;
+					else
+						PlanetSurfaceArray[tempX-1][tempY] = 2;				
+				}		
+			}
+			if(Rotation == 2) //South
+			{
+				tempLocationArray = GetExplorerLocation();
+				int tempX = tempLocationArray[0];
+				int tempY = tempLocationArray[1];
+				PlanetSurfaceArray[tempX][tempY] = 0;
+				tempY--;
 				
+				if(tempY >= 0)
+				{
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[tempX][tempY] = 2;
+					else
+						PlanetSurfaceArray[tempX][tempY-1] = 2;
+				}
+				if(tempY < 0)
+				{
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[tempX][SizeY-1] = 2;
+					else
+						PlanetSurfaceArray[tempX][tempY-1] = 2;				
+				}		
+			}
+			if(Rotation == 3) //South
+			{
+				tempLocationArray = GetExplorerLocation();
+				int tempX = tempLocationArray[0];
+				int tempY = tempLocationArray[1];
+				PlanetSurfaceArray[tempX][tempY] = 0;
+				tempX--;
+				
+				if(tempX >= 0)
+				{
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[tempX][tempY] = 2;
+					else
+						PlanetSurfaceArray[tempX-1][tempY] = 2;
+				}
+				if(tempX < 0)
+				{
+					boolean IsColliding = CheckCollision(tempX,tempY);
+					if(IsColliding == false)
+						PlanetSurfaceArray[SizeX-1][tempY] = 2;
+					else
+						PlanetSurfaceArray[tempX-1][tempY] = 2;				
+				}	
 			}
 		}
 	}
@@ -171,8 +262,29 @@ public class PlanetExplorer {
 		 * Where pos_x and pos_y are the final coordinates, facing is the current direction the explorer is pointing to (N,S,W,E).
 		 * The return string should also contain a list of coordinates of the encountered obstacles. No white spaces.
 		 */
+		int[] tempExplorerLocation = GetExplorerLocation();
 		
-		return null;
+		String Srotation = "F";
+		if(Rotation == 0)
+		{
+			Srotation = "N";
+		}
+		if(Rotation == 1)
+		{
+			Srotation = "E";
+		}
+		if(Rotation == 2)
+		{
+			Srotation = "S";
+		}
+		if(Rotation == 3)
+		{
+			Srotation = "W";
+		}
+		
+		
+		String Results = tempExplorerLocation[0] + ","+tempExplorerLocation[1] + "," + Srotation;
+		return Results;
 	}
 	
 	
