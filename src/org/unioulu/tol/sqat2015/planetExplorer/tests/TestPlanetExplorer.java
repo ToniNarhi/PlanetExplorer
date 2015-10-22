@@ -13,6 +13,5 @@ public class TestPlanetExplorer {
 		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"0,2/2,2");
 		int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
 		assertEquals(1, tempArray[0][2]);
-	
 	}
 }

@@ -1,5 +1,6 @@
-1445503413158 refactoring 3 1035 false
-1445503518458 production 1 105 false
-1445503598554 refactoring 2A 80 false
-1445503877726 production 1 279 false
-1445503982403 refactoring 2A 104 false
+1445503413158 refactoring 3 1035 true
+1445503518458 production 1 105 true
+1445503598554 refactoring 2A 80 true
+1445503877726 production 1 279 true
+1445503982403 refactoring 2A 104 true
+1445504655479 test-first 3 673 true
