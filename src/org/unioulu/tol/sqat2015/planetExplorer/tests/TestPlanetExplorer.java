@@ -10,7 +10,7 @@ public class TestPlanetExplorer {
 	@Test
 	public void testIsGridCreatedCorrectly() 
 	{
-		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"02/22");
+		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"0,2/2,2");
 	
 	}
 }
