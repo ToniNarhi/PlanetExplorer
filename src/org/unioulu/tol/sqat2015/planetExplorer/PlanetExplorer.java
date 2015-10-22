@@ -1,8 +1,8 @@
 package org.unioulu.tol.sqat2015.planetExplorer;
 
 // Before submitting write your ID and finish time here. Your ID is written on project description sheets.
-// ID:
-// Finish time:
+// ID:135
+// Finish time:13:31
 public class PlanetExplorer {
 	int[][] PlanetSurfaceArray;
 	int Rotation = 0;
