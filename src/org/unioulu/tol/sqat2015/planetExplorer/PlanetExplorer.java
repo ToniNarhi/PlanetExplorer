@@ -227,7 +227,7 @@ public class PlanetExplorer {
 				if(tempX < 0)
 				{
 					System.out.println("CheckCollision(tempX,tempY)");
-					boolean IsColliding = CheckCollision(tempX,tempY);
+					boolean IsColliding = CheckCollision(SizeX-1,tempY);
 					if(IsColliding == false)
 					{
 						System.out.println("PlanetSurfaceArray[SizeX-1][tempY] = 2");
