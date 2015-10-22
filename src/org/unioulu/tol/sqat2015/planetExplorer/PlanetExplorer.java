@@ -202,7 +202,7 @@ public class PlanetExplorer {
 						PlanetSurfaceArray[tempX][tempY-1] = 2;				
 				}		
 			}
-			if(Rotation == 3) //South
+			if(Rotation == 3) //west
 			{
 				tempLocationArray = GetExplorerLocation();
 				int tempX = tempLocationArray[0];
@@ -216,7 +216,7 @@ public class PlanetExplorer {
 					if(IsColliding == false)
 						PlanetSurfaceArray[tempX][tempY] = 2;
 					else
-						PlanetSurfaceArray[tempX-1][tempY] = 2;
+						PlanetSurfaceArray[tempX+1][tempY] = 2;
 				}
 				if(tempX < 0)
 				{
@@ -224,7 +224,7 @@ public class PlanetExplorer {
 					if(IsColliding == false)
 						PlanetSurfaceArray[SizeX-1][tempY] = 2;
 					else
-						PlanetSurfaceArray[tempX-1][tempY] = 2;				
+						PlanetSurfaceArray[tempX+1][tempY] = 2;				
 				}	
 			}
 		}
