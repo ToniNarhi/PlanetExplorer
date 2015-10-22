@@ -214,7 +214,7 @@ public class PlanetExplorer {
 				
 				if(tempX >= 0)
 				{
-					System.out.println("CheckCollision(tempX,tempY)");
+					
 					boolean IsColliding = CheckCollision(tempX,tempY);
 					if(IsColliding == false)
 					{
@@ -226,6 +226,7 @@ public class PlanetExplorer {
 				}
 				if(tempX < 0)
 				{
+					System.out.println("CheckCollision(tempX,tempY)");
 					boolean IsColliding = CheckCollision(tempX,tempY);
 					if(IsColliding == false)
 					{
