@@ -18,20 +18,30 @@ public class PlanetExplorer {
 		{
 			  System.out.println(t);
 			  String[] tokens2 = t.split(",");
+			  int tempX = 0;
+			  int tempY = 0;
+			  
 			  
 				for (String t2 : tokens2)
 				{
+					
 					boolean isRun = false;
 					if(IsX == true)
 					{
 						  System.out.println("X:"+t2);
 						  IsX = false;
 						  isRun = true;
+						  tempX = Integer.parseInt(t2);
 					}
 					if(IsX == false && isRun == false)
 					{
 						  System.out.println("Y:"+t2);
 						  IsX = true;
+						  tempY = Integer.parseInt(t2);
+					}
+					if(IsX == true && isRun == false)
+					{					
+						PlanetSurfaceArray[tempX][tempY] = 1;
 					}
 				}
 		}
