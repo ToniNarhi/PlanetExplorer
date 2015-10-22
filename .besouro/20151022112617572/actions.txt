@@ -142,3 +142,6 @@ RefactoringAction 1445508785589 TestPlanetExplorer.java ADD void testIsOutputCor
 RefactoringAction 1445508789604 TestPlanetExplorer.java RENAME testIsOutputCorrectIfGoingOverEdgeObstacle()/2=><initializer /1> null
 RefactoringAction 1445508793115 TestPlanetExplorer.java RENAME <initializer /1>=>void testCollision() METHOD
 EditAction 1445508807959 TestPlanetExplorer.java 1233 4 9 4
+UnitTestCaseAction 1445508808268 TestPlanetExplorer.java FAIL
+UnitTestSessionAction 1445508808268 TestPlanetExplorer FAIL
+EditAction 1445508836653 TestPlanetExplorer.java 1239 4 9 4
