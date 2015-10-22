@@ -34,6 +34,13 @@ public class TestPlanetExplorer {
 	{
 		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"0,1");
 		//int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
-		assertEquals("0,0,N", planetExplorer.executeCommand("fffffrf"));
+		assertEquals("1,0,E", planetExplorer.executeCommand("fffffrf"));
+	}
+	@Test
+	public void testOverEdge() 
+	{
+		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"0,1");
+		//int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
+		assertEquals("0,2,W", planetExplorer.executeCommand("lf"));
 	}
 }

@@ -145,3 +145,13 @@ EditAction 1445508807959 TestPlanetExplorer.java 1233 4 9 4
 UnitTestCaseAction 1445508808268 TestPlanetExplorer.java FAIL
 UnitTestSessionAction 1445508808268 TestPlanetExplorer FAIL
 EditAction 1445508836653 TestPlanetExplorer.java 1239 4 9 4
+UnitTestCaseAction 1445508836957 TestPlanetExplorer.java FAIL
+UnitTestSessionAction 1445508836958 TestPlanetExplorer FAIL
+RefactoringAction 1445508859422 TestPlanetExplorer.java ADD void testCollision()/2 METHOD
+RefactoringAction 1445508866436 TestPlanetExplorer.java RENAME testCollision()/2=>void testCn() METHOD
+RefactoringAction 1445508867951 TestPlanetExplorer.java RENAME testCn()=>void test() METHOD
+RefactoringAction 1445508869466 TestPlanetExplorer.java RENAME test()=>void testOver() METHOD
+RefactoringAction 1445508870980 TestPlanetExplorer.java RENAME testOver()=>void testOveredge() METHOD
+RefactoringAction 1445508873994 TestPlanetExplorer.java RENAME testOveredge()=>void testOverdge() METHOD
+RefactoringAction 1445508875008 TestPlanetExplorer.java RENAME testOverdge()=>void testOverEdge() METHOD
+EditAction 1445508905078 TestPlanetExplorer.java 1479 5 11 5
