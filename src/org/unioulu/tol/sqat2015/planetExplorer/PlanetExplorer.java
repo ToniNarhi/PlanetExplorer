@@ -245,11 +245,11 @@ public class PlanetExplorer {
 			}
 			if(commandArray[x] == 'f')
 			{
-				Move(-1);
+				Move(1);
 			}
 			if(commandArray[x] == 'b')
 			{
-				Move(1);
+				Move(-1);
 			}
 		}
 		
