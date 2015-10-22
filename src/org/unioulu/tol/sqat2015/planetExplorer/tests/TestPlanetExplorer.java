@@ -27,7 +27,7 @@ public class TestPlanetExplorer {
 	{
 		PlanetExplorer planetExplorer = new PlanetExplorer(3,3,"2,2");
 		//int[][] tempArray = planetExplorer.getPlanetSurfaceArray();
-		assertEquals("0,2,E", planetExplorer.executeCommand("ffrfff"));
+		assertEquals("0,2,E", planetExplorer.executeCommand("ffrff"));
 	}
 	@Test
 	public void testCollision() 
